@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragun-story | เพื่อนคู่คิดด้านสุขภาพและการวางแผนการเงิน</title>
+  <meta name="description" content="Pragun-story โดยอุ๋งอิ๋ง ที่ปรึกษาด้านสุขภาพและการวางแผนการเงิน อธิบายเรื่องประกันให้เข้าใจง่าย ไม่กดดัน และวางแผนได้เหมาะกับครอบครัวไทย">
+  <meta name="theme-color" content="#4776A1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=Mali:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #4776A1;
+      --deep-navy: #243B6B;
+      --warm-pink: #F6C8D6;
+      --cta-pink: #EC5D93;
+      --cream: #FFF8F3;
+      --gold: #F4D58D;
+      --mint: #CDEFE7;
+      --white: #FFFFFF;
+      --text: #334155;
+      --muted: #6B7280;
+      --line: #06C755;
+      --border: rgba(36, 59, 107, 0.12);
+      --shadow: 0 18px 50px rgba(36, 59, 107, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(246, 200, 214, 0.35), transparent 34rem),
+        linear-gradient(180deg, var(--cream), #fff);
+      color: var(--text);
+      font-family: "Anuphan", sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1160px;
+      padding: 0 22px;
+    }
+
+    .site-header {
+      backdrop-filter: blur(18px);
+      background: rgba(255, 248, 243, 0.82);
+      border-bottom: 1px solid var(--border);
+      left: 0;
+      position: sticky;
+      right: 0;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 76px;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-navy));
+      border-radius: 18px;
+      color: var(--white);
+      display: grid;
+      font-family: "Mali", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      height: 48px;
+      place-items: center;
+      width: 48px;
+    }
+
+    .brand-title {
+      color: var(--deep-navy);
+      font-family: "Mali", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      align-items: center;
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--deep-navy);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .btn {
+      align-items: center;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: "Mali", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      gap: 8px;
+      justify-content: center;
+      line-height: 1;
+      padding: 14px 22px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--cta-pink);
+      box-shadow: 0 12px 28px rgba(236, 93, 147, 0.28);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      border: 2px solid var(--cta-pink);
+      color: var(--cta-pink);
+    }
+
+    .btn-line {
+      background: var(--line);
+      box-shadow: 0 12px 28px rgba(6, 199, 85, 0.22);
+      color: var(--white);
+    }
+
+    .hero {
+      padding: 74px 0 54px;
+    }
+
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 54px;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.82fr);
+    }
+
+    .eyebrow {
+      align-items: center;
+      background: rgba(246, 200, 214, 0.62);
+      border: 1px solid rgba(236, 93, 147, 0.16);
+      border-radius: 999px;
+      color: var(--deep-navy);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 800;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--deep-navy);
+      font-family: "Mali", sans-serif;
+      line-height: 1.35;
+    }
+
+    h1 {
+      font-family: "Anuphan", sans-serif;
+      font-size: clamp(36px, 5vw, 62px);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero-copy {
+      color: #52606f;
+      font-size: 18px;
+      margin-bottom: 28px;
+      max-width: 670px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .trust-row {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 650px;
+    }
+
+    .trust-item {
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .trust-number {
+      color: var(--deep-navy);
+      font-family: "Mali", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trust-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .notebook-card {
+      background:
+        linear-gradient(90deg, rgba(71, 118, 161, 0.09) 1px, transparent 1px),
+        linear-gradient(rgba(71, 118, 161, 0.08) 1px, transparent 1px),
+        var(--white);
+      background-size: 24px 24px;
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+    }
+
+    .notebook-card::before {
+      background: var(--warm-pink);
+      border-radius: 999px;
+      content: "";
+      height: 70px;
+      left: 26px;
+      opacity: 0.9;
+      position: absolute;
+      top: -18px;
+      transform: rotate(-4deg);
+      width: 164px;
+      z-index: -1;
+    }
+
+    .mentor-card {
+      background: linear-gradient(145deg, rgba(205, 239, 231, 0.62), rgba(255, 248, 243, 0.92));
+      border: 1px solid rgba(71, 118, 161, 0.14);
+      border-radius: 28px;
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .mentor-portrait {
+      align-items: center;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(246, 200, 214, 0.72), transparent 30%),
+        linear-gradient(180deg, #fff, rgba(71, 118, 161, 0.08));
+      border: 1px solid rgba(36, 59, 107, 0.08);
+      border-radius: 26px;
+      display: grid;
+      min-height: 430px;
+      overflow: hidden;
+      place-items: center;
+      position: relative;
+    }
+
+    .mentor-photo {
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      object-position: center top;
+      width: 100%;
+    }
+
+    .sticky-note {
+      background: var(--gold);
+      border-radius: 16px;
+      box-shadow: 0 14px 26px rgba(94, 74, 33, 0.12);
+      color: var(--deep-navy);
+      font-size: 14px;
+      font-weight: 700;
+      max-width: 210px;
+      padding: 14px;
+      position: absolute;
+      right: 16px;
+      top: 18px;
+      transform: rotate(4deg);
+    }
+
+    .mentor-info {
+      padding-top: 20px;
+    }
+
+    .mentor-info h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .mentor-info p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-heading {
+      margin: 0 auto 34px;
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--cta-pink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .pillars {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pillar-card,
+    .product-card,
+    .story-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      box-shadow: 0 14px 38px rgba(36, 59, 107, 0.07);
+      padding: 24px;
+    }
+
+    .icon-box {
+      align-items: center;
+      background: var(--warm-pink);
+      border-radius: 18px;
+      color: var(--deep-navy);
+      display: grid;
+      font-size: 27px;
+      height: 58px;
+      margin-bottom: 18px;
+      place-items: center;
+      width: 58px;
+    }
+
+    .pillar-card:nth-child(2) .icon-box {
+      background: var(--mint);
+    }
+
+    .pillar-card:nth-child(3) .icon-box {
+      background: var(--gold);
+    }
+
+    .pillar-card h3,
+    .product-card h3,
+    .story-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .pillar-card p,
+    .product-card p,
+    .story-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .products {
+      background:
+        radial-gradient(circle at 10% 15%, rgba(205, 239, 231, 0.55), transparent 28rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 248, 243, 0.8));
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .badge {
+      background: var(--warm-pink);
+      border-radius: 999px;
+      color: var(--deep-navy);
+      display: inline-flex;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+    }
+
+    .product-card.featured {
+      border: 2px solid rgba(236, 93, 147, 0.25);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      margin: 18px 0 24px;
+    }
+
+    .feature-list li {
+      align-items: flex-start;
+      color: #52606f;
+      display: flex;
+      font-size: 14px;
+      gap: 10px;
+    }
+
+    .feature-list li::before {
+      background: var(--mint);
+      border-radius: 50%;
+      color: var(--deep-navy);
+      content: "✓";
+      flex: 0 0 22px;
+      font-size: 13px;
+      font-weight: 800;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .story-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .quote {
+      border-left: 5px solid var(--cta-pink);
+      color: var(--deep-navy);
+      font-family: "Mali", sans-serif;
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      padding-left: 18px;
+    }
+
+    .author {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .cta-section {
+      padding-bottom: 82px;
+    }
+
+    .cta-panel {
+      background:
+        radial-gradient(circle at top right, rgba(246, 200, 214, 0.48), transparent 22rem),
+        linear-gradient(135deg, var(--deep-navy), var(--primary-blue));
+      border-radius: 34px;
+      color: var(--white);
+      overflow: hidden;
+      padding: 42px;
+      position: relative;
+    }
+
+    .cta-panel::after {
+      background: var(--gold);
+      border-radius: 999px;
+      content: "";
+      height: 160px;
+      opacity: 0.45;
+      position: absolute;
+      right: -45px;
+      top: -50px;
+      width: 160px;
+    }
+
+    .cta-panel h2 {
+      color: var(--white);
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+      max-width: 680px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-panel p {
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 24px;
+      max-width: 620px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-panel .hero-actions {
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-footer {
+      background: var(--deep-navy);
+      color: rgba(255, 255, 255, 0.72);
+      padding: 32px 0;
+    }
+
+    .footer-grid {
+      align-items: center;
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+    }
+
+    .site-footer strong {
+      color: var(--white);
+      font-family: "Mali", sans-serif;
+      font-size: 18px;
+    }
+
+    .line-fab {
+      align-items: center;
+      background: var(--line);
+      border-radius: 999px;
+      bottom: 22px;
+      box-shadow: 0 14px 32px rgba(6, 199, 85, 0.28);
+      color: var(--white);
+      display: flex;
+      font-weight: 800;
+      gap: 8px;
+      padding: 14px 18px;
+      position: fixed;
+      right: 22px;
+      z-index: 30;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .pillars,
+      .product-grid,
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .brand-subtitle {
+        display: none;
+      }
+
+      .notebook-card,
+      .cta-panel {
+        border-radius: 24px;
+        padding: 22px;
+      }
+
+      .mentor-portrait,
+      .mentor-photo {
+        min-height: 360px;
+      }
+
+      section {
+        padding: 46px 0;
+      }
+
+      .line-fab {
+        bottom: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">P</span>
+        <span>
+          <span class="brand-title">Pragun-story</span>
+          <span class="brand-subtitle">Health Planning Mentor</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="#">หน้าแรก</a>
+        <a href="#">เกี่ยวกับอุ๋งอิ๋ง</a>
+        <a href="#">แบบประกัน</a>
+        <a href="#">บทความ</a>
+        <a href="#">สมัครเป็นตัวแทน</a>
+        <a href="#">รีวิวจากลูกค้า</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">ปรึกษาฟรี</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">เพื่อนคู่คิดด้านสุขภาพและการวางแผนการเงิน</div>
+          <h1>วางแผนสุขภาพให้เข้าใจง่าย ไม่กดดัน และเหมาะกับชีวิตจริง</h1>
+          <p class="hero-copy">
+            Pragun-story โดยอุ๋งอิ๋ง ช่วยอธิบายเรื่องประกันสุขภาพ การเงิน และความมั่นคงของครอบครัว
+            ด้วยภาษาง่าย พร้อมตัวอย่างที่เห็นภาพก่อนตัดสินใจ
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">ประเมินแผนสุขภาพฟรี</a>
+            <a class="btn btn-secondary" href="#products">ดูแผนที่แนะนำ</a>
+            <a class="btn btn-line" href="https://lin.ee/KABBEjH" target="_blank" rel="noopener noreferrer">คุยผ่าน LINE</a>
+          </div>
+          <div class="trust-row" aria-label="จุดเด่นของ Pragun-story">
+            <div class="trust-item">
+              <div class="trust-number">Mentor</div>
+              <div class="trust-label">อธิบายทีละขั้น</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-number">Care</div>
+              <div class="trust-label">ดูแลแบบเป็นกันเอง</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-number">Plan</div>
+              <div class="trust-label">วางแผนตามงบและชีวิต</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="notebook-card" aria-label="Aunging Mentor card">
+          <div class="mentor-card">
+            <div class="mentor-portrait">
+              <div class="sticky-note">Health Planning Notebook</div>
+              <img class="mentor-photo" src="image/profile.jpg" alt="อุ๋งอิ๋ง ที่ปรึกษา Pragun-story" loading="eager">
+            </div>
+            <div class="mentor-info">
+              <h2>Aunging Mentor</h2>
+              <p>ผู้หญิงไทย ใจเย็น อธิบายเก่ง เข้าถึงง่าย และช่วยให้เรื่องประกันไม่ซับซ้อนเกินไป</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillars">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">How We Help</div>
+          <h2>ไม่ใช่แค่ขายประกัน แต่ช่วยให้เข้าใจก่อนตัดสินใจ</h2>
+          <p>ใช้หลัก Health Planning Notebook: จดให้เห็นภาพ เช็กลิสต์ให้ครบ และเล่าเรื่องยากให้เป็นเรื่องง่าย</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar-card">
+            <div class="icon-box">🏥</div>
+            <h3>Health Education</h3>
+            <p>อธิบายประกันสุขภาพ ค่ารักษา Waiting Period, Copayment และโรคร้ายแรงด้วยภาษาง่าย</p>
+          </article>
+          <article class="pillar-card">
+            <div class="icon-box">👨‍👩‍👧</div>
+            <h3>Family Planning</h3>
+            <p>ช่วยคิดเผื่อคนข้างหลัง ความมั่นคงของครอบครัว และความเสี่ยงที่อาจเกิดขึ้นแบบไม่คาดคิด</p>
+          </article>
+          <article class="pillar-card">
+            <div class="icon-box">📝</div>
+            <h3>Advisor Note</h3>
+            <p>สรุปเป็น checklist และ note สั้นๆ เพื่อให้เห็นทางเลือก งบประมาณ และจุดที่ควรถามก่อนซื้อ</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Recommended Plans</div>
+          <h2>แผนที่ใช้เป็นจุดเริ่มต้นในการคุย</h2>
+          <p>เลือกจากความต้องการจริง ไม่เร่งปิดการขาย และไม่ใช้ความกลัวเป็นตัวนำ</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card featured">
+            <span class="badge">Core Product</span>
+            <h3>D Health Lite</h3>
+            <p>จุดเริ่มต้นสำหรับคนที่อยากวางแผนค่ารักษาพยาบาลและเข้าใจเงื่อนไขสำคัญก่อนตัดสินใจ</p>
+            <ul class="feature-list">
+              <li>เหมาะกับคนเริ่มวางแผนสุขภาพ</li>
+              <li>ใช้คุยเรื่องงบประมาณและความคุ้มครอง</li>
+              <li>อธิบายด้วย checklist ก่อนเลือกแผน</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">เช็กแผนสุขภาพฟรี</a>
+          </article>
+          <article class="product-card">
+            <span class="badge">Supporting Product</span>
+            <h3>Care Plus</h3>
+            <p>ตัวช่วยเสริมสำหรับความเสี่ยงด้านโรคร้ายแรงและค่าใช้จ่ายสุขภาพที่ควรดูประกอบกับแผนหลัก</p>
+            <ul class="feature-list">
+              <li>ใช้เสริมช่องว่างความคุ้มครอง</li>
+              <li>เหมาะกับการวางแผนโรคร้ายแรง</li>
+              <li>ช่วยเปรียบเทียบให้เห็นภาพง่ายขึ้น</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">ส่งคำถาม</a>
+          </article>
+          <article class="product-card">
+            <span class="badge">Legacy Product</span>
+            <h3>Flexi Protection 99/20</h3>
+            <p>แผนชีวิตที่ใช้คุยเรื่องความคุ้มครองระยะยาว การดูแลคนข้างหลัง และการวางแผนหลังเกษียณ</p>
+            <ul class="feature-list">
+              <li>คุยได้ทั้งชีวิตและสุขภาพระยะยาว</li>
+              <li>เหมาะกับคนเริ่มคิดเรื่องครอบครัว</li>
+              <li>ช่วยต่อยอดเป็นแผนการเงินส่วนบุคคล</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">นัดพูดคุยเบื้องต้น</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Storytelling</div>
+          <h2>เล่าเรื่องประกันแบบไม่ทำให้กลัว</h2>
+          <p>เพราะการตัดสินใจเรื่องสุขภาพและการเงินควรเกิดจากความเข้าใจ ไม่ใช่ความกลัว</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <p class="quote">“ประกันสุขภาพไม่ควรเริ่มจากคำถามว่าแพงไหม แต่ควรเริ่มจากชีวิตเราเสี่ยงอะไร และรับความเสี่ยงได้แค่ไหน”</p>
+            <p class="author">Advisor Note จาก Pragun-story</p>
+          </article>
+          <article class="story-card">
+            <h3>หัวข้อที่เราช่วยอธิบาย</h3>
+            <ul class="feature-list">
+              <li>Waiting Period และ Copayment</li>
+              <li>ค่ารักษาพยาบาลและวงเงินคุ้มครอง</li>
+              <li>การดูแลคนที่รักและการส่งต่อมรดก</li>
+              <li>การวางแผนเกษียณและป้องกันความเสี่ยง</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-panel">
+          <h2>อยากเริ่มวางแผนสุขภาพ แต่ไม่รู้ควรเริ่มจากตรงไหน?</h2>
+          <p>ส่งคำถามหรือแอด LINE มาคุยเบื้องต้นได้ฟรี อุ๋งอิ๋งจะช่วยไล่โจทย์ชีวิต งบประมาณ และความคุ้มครองที่ควรถามก่อนตัดสินใจ</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://lin.ee/KABBEjH" target="_blank" rel="noopener noreferrer">คุยผ่าน LINE</a>
+            <a class="btn btn-secondary" href="mailto:pmaardlert@gmail.com">ส่งคำถามทางอีเมล</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Pragun-story</strong>
+        <p>เพื่อนคู่คิดด้านสุขภาพและการวางแผนการเงิน</p>
+      </div>
+      <p>Brand system: Blue + Cream, Pink signature, Gold + Mint accents</p>
+    </div>
+  </footer>
+
+  <a class="line-fab" href="https://lin.ee/KABBEjH" target="_blank" rel="noopener noreferrer" aria-label="คุยผ่าน LINE">
+    LINE
+  </a>
+</body>
+</html>

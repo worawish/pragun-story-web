@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragun-story — Color Palette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Mali:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue:  #4776A1;
+      --deep-navy:     #243B6B;
+      --warm-pink:     #F6C8D6;
+      --cta-pink:      #EC5D93;
+      --cream:         #FFF8F3;
+      --gold:          #F4D58D;
+      --mint:          #CDEFE7;
+      --white:         #FFFFFF;
+      --text:          #334155;
+      --muted:         #6B7280;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Anuphan', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--deep-navy);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .swatch {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(74, 109, 133, 0.1);
+      background: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .swatch:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(74, 109, 133, 0.14);
+    }
+
+    .swatch-color {
+      height: 140px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .swatch-color::after {
+      content: 'คลิกเพื่อคัดลอก';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.45);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .swatch-color:hover::after { opacity: 1; }
+
+    .swatch-info {
+      padding: 16px 18px;
+    }
+
+    .swatch-role {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .swatch-name {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--deep-navy);
+      margin-bottom: 6px;
+    }
+
+    .swatch-hex {
+      font-family: ui-monospace, monospace;
+      font-size: 0.9rem;
+      color: var(--deep-navy);
+      background: var(--cream);
+      padding: 6px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      cursor: pointer;
+      user-select: all;
+    }
+
+    .swatch-hex:hover { background: var(--warm-pink); }
+
+    .swatch-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* Combinations */
+    .section-title {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--deep-navy);
+      margin-bottom: 20px;
+    }
+
+    .combos {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .combo {
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .combo-label {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .combo h3 {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .combo-1 {
+      background: var(--primary-blue);
+      color: #fff;
+    }
+
+    .combo-2 {
+      background: var(--warm-pink);
+      color: var(--deep-navy);
+    }
+
+    .combo-3 {
+      background: var(--cream);
+      color: var(--deep-navy);
+      border: 2px solid var(--gold);
+    }
+
+    .combo-4 {
+      background: #fff;
+      color: var(--deep-navy);
+      border: 1px solid var(--warm-pink);
+    }
+
+    .btn-demo {
+      font-family: 'Mali', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn-demo:hover { opacity: 0.9; }
+
+    .btn-primary {
+      background: var(--cta-pink);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--cta-pink);
+      border: 2px solid var(--cta-pink);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--deep-navy);
+      border: 2px solid var(--deep-navy);
+    }
+
+    .btn-accent {
+      background: var(--gold);
+      color: var(--deep-navy);
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--deep-navy);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pragun-story Color Palette</h1>
+      <p>จาก PRAGUN-STORY BRAND BOOK V1.0 · Brand Color System · Health Planning Notebook</p>
+    </header>
+
+    <div class="palette">
+      <article class="swatch">
+        <div class="swatch-color" style="background:#4776A1" data-hex="#4776A1" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Primary</div>
+          <div class="swatch-name">Primary Blue</div>
+          <code class="swatch-hex" data-hex="#4776A1">#4776A1</code>
+          <p class="swatch-desc">Navigation, header, main CTA section, link และ icon หลัก</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#243B6B" data-hex="#243B6B" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Text / Heading</div>
+          <div class="swatch-name">Deep Navy</div>
+          <code class="swatch-hex" data-hex="#243B6B">#243B6B</code>
+          <p class="swatch-desc">H1, H2, H3, important text และ footer</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#F6C8D6" data-hex="#F6C8D6" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Brand Signature</div>
+          <div class="swatch-name">Warm Pink</div>
+          <code class="swatch-hex" data-hex="#F6C8D6">#F6C8D6</code>
+          <p class="swatch-desc">Highlight, badge, background section และ decorative elements</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#EC5D93" data-hex="#EC5D93" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">CTA</div>
+          <div class="swatch-name">CTA Pink</div>
+          <code class="swatch-hex" data-hex="#EC5D93">#EC5D93</code>
+          <p class="swatch-desc">Primary button, lead form CTA และ conversion element</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#FFF8F3;border:1px solid #eadfd2" data-hex="#FFF8F3" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Background</div>
+          <div class="swatch-name">Notebook Cream</div>
+          <code class="swatch-hex" data-hex="#FFF8F3">#FFF8F3</code>
+          <p class="swatch-desc">Website background, notebook layout และ blog area</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#F4D58D" data-hex="#F4D58D" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Accent</div>
+          <div class="swatch-name">Notebook Gold</div>
+          <code class="swatch-hex" data-hex="#F4D58D">#F4D58D</code>
+          <p class="swatch-desc">Sticky note, highlight, achievement badge และ CTA support</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#CDEFE7" data-hex="#CDEFE7" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Health Accent</div>
+          <div class="swatch-name">Health Mint</div>
+          <code class="swatch-hex" data-hex="#CDEFE7">#CDEFE7</code>
+          <p class="swatch-desc">Health planning hub, health articles, calculator และ category</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background:#FFFFFF;border:1px solid #E5E7EB" data-hex="#FFFFFF" title="คลิกเพื่อคัดลอก"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Surface</div>
+          <div class="swatch-name">Pure White</div>
+          <code class="swatch-hex" data-hex="#FFFFFF">#FFFFFF</code>
+          <p class="swatch-desc">Card background, form และ content container</p>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="section-title">ตัวอย่างการจับคู่สี</h2>
+    <div class="combos">
+      <div class="combo combo-1">
+        <div>
+          <div class="combo-label">Primary Blue + White text</div>
+          <h3>Hero / Header</h3>
+        </div>
+        <button type="button" class="btn-demo" style="background:#EC5D93;color:#fff">ประเมินแผนสุขภาพฟรี</button>
+      </div>
+      <div class="combo combo-2">
+        <div>
+          <div class="combo-label">Warm Pink + Deep Navy text</div>
+          <h3>Brand signature highlight</h3>
+        </div>
+      </div>
+      <div class="combo combo-3">
+        <div>
+          <div class="combo-label">Notebook Cream + Gold border</div>
+          <h3>Notebook section</h3>
+        </div>
+      </div>
+      <div class="combo combo-4">
+        <div>
+          <div class="combo-label">White + Warm Pink border</div>
+          <h3>Card / Form surface</h3>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">สัดส่วนการใช้สี</h2>
+    <div class="combos">
+      <div class="combo combo-3">
+        <div>
+          <div class="combo-label">60%</div>
+          <h3>Cream / White — พื้นหลังและพื้นที่อ่านเนื้อหา</h3>
+        </div>
+      </div>
+      <div class="combo combo-1">
+        <div>
+          <div class="combo-label">25%</div>
+          <h3>Blue / Navy — โครงหลัก หัวข้อ และความน่าเชื่อถือ</h3>
+        </div>
+      </div>
+      <div class="combo combo-2">
+        <div>
+          <div class="combo-label">10%</div>
+          <h3>Pink — character, badge และ CTA สำคัญ</h3>
+        </div>
+      </div>
+      <div class="combo combo-4">
+        <div>
+          <div class="combo-label">5%</div>
+          <h3>Gold + Mint — sticky note และ health content</h3>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">ปุ่ม (Buttons)</h2>
+    <div class="buttons-row">
+      <button type="button" class="btn-demo btn-primary">Primary CTA — Pink</button>
+      <button type="button" class="btn-demo btn-secondary">Secondary CTA — Outline Pink</button>
+      <button type="button" class="btn-demo btn-outline">Outline — Navy</button>
+      <button type="button" class="btn-demo btn-accent">Accent — Gold</button>
+    </div>
+
+    <footer>
+      Pragun-story Brand Book V1.0 · Fonts: Mali + Anuphan
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">คัดลอกแล้ว</div>
+
+  <script>
+    const toast = document.getElementById('toast');
+    let toastTimer;
+
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        toast.textContent = 'คัดลอก ' + hex + ' แล้ว';
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+      });
+    }
+
+    document.querySelectorAll('[data-hex]').forEach(el => {
+      el.addEventListener('click', () => copyHex(el.dataset.hex));
+    });
+  </script>
+</body>
+</html>
