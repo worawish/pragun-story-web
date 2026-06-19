@@ -1,0 +1,1061 @@
+/* Elite Health Plus landing — premium health rider */
+
+.ehp-page {
+  background: linear-gradient(180deg, #f8f6ff 0%, #fff 24%, #fff 100%);
+  padding-bottom: 84px;
+  scroll-padding-bottom: 80px;
+}
+
+.ehp-page :is(h1, h2, h3) {
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.ehp-page .section-heading h2 {
+  font-family: "Anuphan", sans-serif;
+  font-weight: 700;
+  line-height: 1.75;
+  padding-block: 0.12em;
+}
+
+.ehp-page .eyebrow {
+  background: linear-gradient(135deg, rgba(71, 118, 161, 0.14), rgba(212, 175, 55, 0.18));
+  border-radius: 999px;
+  color: #5c4a1a;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+}
+
+.ehp-page .badge-vip {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: #fff;
+}
+
+.ehp-hero-features {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 24px 0;
+}
+
+.ehp-hero-features article {
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(36, 59, 107, 0.06);
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+}
+
+.ehp-hero-icon {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(71, 118, 161, 0.14), rgba(212, 175, 55, 0.16));
+  border-radius: 14px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 22px;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.ehp-hero-features strong {
+  color: var(--deep-navy);
+  display: block;
+  font-family: "Mali", sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.ehp-hero-features span {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ehp-hero-card {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.ehp-summary-card {
+  background: linear-gradient(160deg, #1f355f 0%, #2d4f86 55%, #3a6299 100%);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(36, 59, 107, 0.2);
+  color: #fff;
+  padding: 28px;
+}
+
+.ehp-summary-card .badge {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.ehp-summary-card h3 {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.ehp-summary-card p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.ehp-summary-stats {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.ehp-summary-stats li {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+
+.ehp-summary-stats strong {
+  color: #f5d77a;
+  display: block;
+  font-family: "Mali", sans-serif;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.ehp-summary-card small {
+  color: rgba(255, 255, 255, 0.65);
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+.ehp-conditions-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.ehp-condition-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(36, 59, 107, 0.05);
+  padding: 18px;
+  text-align: center;
+}
+
+.ehp-condition-card span {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.ehp-condition-card strong {
+  color: var(--deep-navy);
+  font-family: "Mali", sans-serif;
+  font-size: 16px;
+}
+
+.ehp-waiting-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ehp-waiting-card {
+  background: rgba(71, 118, 161, 0.06);
+  border: 1px solid rgba(71, 118, 161, 0.12);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.ehp-waiting-card span {
+  color: var(--muted);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.ehp-waiting-card strong {
+  color: var(--primary-blue);
+  font-size: 18px;
+}
+
+.ehp-plan-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ehp-plan-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 14px 36px rgba(36, 59, 107, 0.07);
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.ehp-plan-card--featured {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), #fff 38%);
+  border-color: rgba(184, 134, 11, 0.28);
+}
+
+.ehp-plan-card--premium {
+  background: linear-gradient(180deg, rgba(71, 118, 161, 0.1), #fff 38%);
+  border-color: rgba(71, 118, 161, 0.22);
+}
+
+.ehp-plan-card h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.ehp-plan-coverage {
+  color: var(--primary-blue);
+  font-family: "Mali", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 8px 0 14px;
+}
+
+.ehp-area-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ehp-area-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.ehp-area-card .flag {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.ehp-area-card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.ehp-area-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ehp-addon-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ehp-addon-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(36, 59, 107, 0.06);
+  overflow: hidden;
+}
+
+.ehp-addon-card header {
+  color: #fff;
+  padding: 20px 22px;
+}
+
+.ehp-addon-card--maternity header {
+  background: linear-gradient(135deg, #e91e8c, #c2185b);
+}
+
+.ehp-addon-card--wellbeing header {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.ehp-addon-card header h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.ehp-addon-card header p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+}
+
+.ehp-addon-body {
+  background: var(--white);
+  padding: 20px 22px;
+}
+
+.ehp-addon-details {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.ehp-addon-details li {
+  color: var(--text);
+  font-size: 14px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.ehp-addon-details li::before {
+  color: #2f8f78;
+  content: "✓";
+  font-weight: 800;
+  left: 0;
+  position: absolute;
+}
+
+.ehp-addon-plans {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ehp-addon-plan {
+  background: rgba(71, 118, 161, 0.05);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.ehp-addon-plan h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ehp-addon-plan table {
+  font-size: 13px;
+  width: 100%;
+}
+
+.ehp-addon-plan td:last-child {
+  font-weight: 700;
+  text-align: right;
+}
+
+.ehp-addon-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+.ehp-proscons {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ehp-proscons-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.ehp-proscons-box h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.ehp-proscons-box ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ehp-proscons-box li {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 26px;
+  position: relative;
+}
+
+.ehp-proscons-box--pros li::before {
+  color: #2f8f78;
+  content: "✓";
+  font-weight: 800;
+  left: 0;
+  position: absolute;
+}
+
+.ehp-proscons-box--cons li::before {
+  color: #c45c5c;
+  content: "!";
+  font-weight: 800;
+  left: 2px;
+  position: absolute;
+}
+
+.ehp-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ehp-faq-list details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(36, 59, 107, 0.04);
+  padding: 0;
+}
+
+.ehp-faq-list summary {
+  cursor: pointer;
+  font-family: "Mali", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  padding: 18px 48px 18px 20px;
+  position: relative;
+}
+
+.ehp-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.ehp-faq-list summary::after {
+  color: var(--primary-blue);
+  content: "+";
+  font-size: 22px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ehp-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.ehp-faq-list details p {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 20px 18px;
+}
+
+.ehp-highlight-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ehp-highlight-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(36, 59, 107, 0.05);
+  padding: 20px;
+}
+
+.ehp-highlight-card .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.ehp-highlight-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.ehp-highlight-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.ehp-coverage-table {
+  min-width: 680px;
+}
+
+.ehp-col-plan {
+  min-width: 72px;
+  width: 80px;
+}
+
+.ehp-cell-yes {
+  color: #2f8f78;
+  font-weight: 700;
+}
+
+.ehp-cell-no {
+  color: #9aa3b5;
+}
+
+/* Final CTA — same layout as D Health Lite (dhl-landing.css not loaded on this page) */
+.ehp-page .dhl-final-cta {
+  background:
+    radial-gradient(circle at 18% 50%, rgba(212, 175, 55, 0.2), transparent 16rem),
+    linear-gradient(135deg, #1a2d52, #243b6b 58%, #2d4f86);
+  color: var(--white);
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.ehp-page .dhl-final-cta-inner {
+  align-items: center;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  padding: 48px 0;
+}
+
+.ehp-page .dhl-final-cta-copy {
+  min-width: 0;
+}
+
+.ehp-page .dhl-final-cta-copy h2 {
+  color: var(--white);
+  font-family: "Anuphan", sans-serif;
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 700;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  text-wrap: pretty;
+}
+
+.ehp-page .dhl-final-cta-copy p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  max-width: 52ch;
+}
+
+.ehp-page .dhl-final-cta .hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.ehp-page .dhl-btn-ghost {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  color: var(--white);
+}
+
+.ehp-page .dhl-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ehp-page .dhl-final-cta-photo {
+  border: 4px solid rgba(255, 255, 255, 0.22);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  display: block;
+  height: 260px;
+  justify-self: center;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+
+.ehp-page .dhl-final-heart {
+  align-items: center;
+  background: rgba(212, 175, 55, 0.22);
+  border-radius: 18px;
+  color: #f5d77a;
+  display: inline-flex;
+  height: 52px;
+  justify-content: center;
+  margin-bottom: 14px;
+  width: 52px;
+}
+
+.ehp-page .dhl-disclaimer .plan-disclaimer {
+  background: rgba(71, 118, 161, 0.08);
+  border: 1px solid rgba(71, 118, 161, 0.14);
+  border-radius: 22px;
+  padding: 22px 24px;
+}
+
+.ehp-sticky-bar {
+  background: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid var(--border);
+  bottom: 0;
+  box-shadow: 0 -8px 28px rgba(36, 59, 107, 0.1);
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 40;
+}
+
+.ehp-sticky-bar-inner {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.ehp-sticky-brand {
+  align-items: center;
+  color: var(--deep-navy);
+  display: flex;
+  font-weight: 700;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.ehp-sticky-brand-mark {
+  align-items: center;
+  background: linear-gradient(135deg, #4776a1, #d4af37);
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.ehp-sticky-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ehp-sticky-actions .btn {
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+.ehp-plan-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.ehp-page .dhl-check-list {
+  display: grid;
+  flex: 1;
+  gap: 10px;
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.ehp-page .dhl-check-list li {
+  color: var(--text);
+  font-size: 14px;
+  padding-left: 26px;
+  position: relative;
+}
+
+.ehp-page .dhl-check-list li::before {
+  color: #b8860b;
+  content: "✓";
+  font-weight: 800;
+  left: 0;
+  position: absolute;
+}
+
+.ehp-plan-card .dhl-check-list {
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+/* Premium calculator */
+#premium-calculator {
+  padding-block: 48px;
+}
+
+.ehp-calculator-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 0.85fr);
+  padding: 28px;
+}
+
+.ehp-calculator-intro,
+.ehp-calculator-form,
+.ehp-calculator-result {
+  min-width: 0;
+}
+
+.ehp-calculator-intro h2 {
+  font-family: "Anuphan", sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.ehp-calculator-intro p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ehp-calculator-grid {
+  grid-template-columns: 1fr;
+}
+
+.ehp-page .ehp-calculator-grid.calculator-grid {
+  grid-template-columns: 1fr;
+}
+
+.ehp-calculator-form .calculator-grid label {
+  margin: 0;
+}
+
+.ehp-page .ehp-calculator-form .calculator-grid select {
+  font-size: 14px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ehp-addon-options {
+  display: grid;
+  gap: 10px;
+  grid-column: 1 / -1;
+}
+
+.ehp-addon-options-label {
+  color: var(--deep-navy);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ehp-addon-option {
+  align-items: flex-start;
+  background: rgba(71, 118, 161, 0.05);
+  border: 1px solid rgba(71, 118, 161, 0.12);
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.ehp-addon-option:has(input:checked) {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(184, 134, 11, 0.35);
+}
+
+.ehp-addon-block {
+  background: rgba(71, 118, 161, 0.05);
+  border: 1px solid rgba(71, 118, 161, 0.12);
+  border-radius: 16px;
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+}
+
+.ehp-addon-block--disabled {
+  opacity: 0.55;
+}
+
+.ehp-addon-block--disabled .ehp-addon-option {
+  background: transparent;
+  border: 0;
+  cursor: not-allowed;
+}
+
+.ehp-addon-block:has([data-ehp-field="maternity"]:checked):not(
+    .ehp-addon-block--disabled
+  ) {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(184, 134, 11, 0.35);
+}
+
+.ehp-addon-block .ehp-addon-option {
+  border: 0;
+  border-radius: 0;
+}
+
+.ehp-addon-option--disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.ehp-addon-option--disabled:has(input:checked) {
+  background: rgba(71, 118, 161, 0.05);
+  border-color: rgba(71, 118, 161, 0.12);
+}
+
+.ehp-maternity-plans {
+  border: 0;
+  border-top: 1px solid rgba(71, 118, 161, 0.1);
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 14px 12px 42px;
+}
+
+.ehp-addon-block:has([data-ehp-field="maternity"]:checked):not(
+    .ehp-addon-block--disabled
+  )
+  .ehp-maternity-plans {
+  border-top-color: rgba(184, 134, 11, 0.2);
+}
+
+.ehp-maternity-plan {
+  align-items: center;
+  color: var(--deep-navy);
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.ehp-maternity-plan input {
+  accent-color: var(--primary-blue);
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.ehp-addon-option input {
+  accent-color: var(--primary-blue);
+  flex-shrink: 0;
+  height: 18px;
+  margin-top: 2px;
+  width: 18px;
+}
+
+.ehp-addon-option-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.ehp-addon-option-copy strong {
+  color: var(--deep-navy);
+  font-family: "Mali", sans-serif;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.ehp-addon-option-copy small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ehp-calculator-result {
+  align-items: stretch;
+  background: linear-gradient(
+    180deg,
+    rgba(212, 175, 55, 0.14),
+    rgba(71, 118, 161, 0.08)
+  );
+  border: 1px solid rgba(71, 118, 161, 0.14);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.ehp-result-icon {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 18px;
+  color: var(--primary-blue);
+  display: flex;
+  flex-shrink: 0;
+  height: 56px;
+  justify-content: center;
+  margin: 0 auto 14px;
+  width: 56px;
+}
+
+.ehp-result-meta {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.ehp-result-amount {
+  color: var(--deep-navy);
+  font-family: "Mali", sans-serif;
+  font-size: clamp(26px, 6vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.ehp-result-unit {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ehp-result-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.ehp-calculator-result .btn {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .ehp-hero-features,
+  .ehp-highlight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ehp-plan-grid,
+  .ehp-area-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ehp-conditions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ehp-waiting-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .ehp-hero-features {
+    display: none;
+  }
+
+  .ehp-page .dhl-final-cta-inner {
+    grid-template-columns: 1fr;
+    padding: 36px 0;
+  }
+
+  .ehp-page .dhl-final-cta-photo {
+    height: 220px;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  #premium-calculator {
+    padding-block: 32px;
+  }
+
+  #premium-calculator .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .ehp-calculator-panel {
+    gap: 18px;
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+
+  .ehp-calculator-intro h2 {
+    font-size: clamp(22px, 5.5vw, 30px);
+  }
+
+  .ehp-calculator-grid,
+  .ehp-page .ehp-calculator-grid.calculator-grid,
+  .ehp-page .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ehp-page .ehp-calculator-form .calculator-grid select {
+    font-size: 13px;
+    white-space: normal;
+  }
+
+  .ehp-calculator-result {
+    padding: 20px 16px;
+  }
+
+  .ehp-conditions-grid,
+  .ehp-waiting-grid,
+  .ehp-highlight-grid,
+  .ehp-plan-grid,
+  .ehp-area-grid,
+  .ehp-addon-grid,
+  .ehp-proscons {
+    grid-template-columns: 1fr;
+  }
+
+  .ehp-addon-plans {
+    grid-template-columns: 1fr;
+  }
+
+  .ehp-coverage-table {
+    min-width: 560px;
+  }
+
+  .ehp-col-plan {
+    min-width: 64px;
+    width: 72px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ehp-coverage-table {
+    font-size: 10.5px;
+    min-width: 500px;
+  }
+
+  .ehp-coverage-table .dhl-coverage-section-row th {
+    min-width: 500px;
+  }
+
+  .ehp-sticky-brand span:not(.ehp-sticky-brand-mark) {
+    display: none;
+  }
+
+  .ehp-result-amount {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+}
